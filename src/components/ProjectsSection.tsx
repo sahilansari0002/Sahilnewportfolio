@@ -62,7 +62,7 @@ const projects: Project[] = [
   category: 'Web App',
   technologies: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'Tailwind CSS', 'Firebase', 'Stripe API'],
   liveUrl: '',
-  githubUrl: 'https://github.com/sahilansari0002/SkillFirst',
+  githubUrl: 'https://github.com/sahilansari0002',
   features: [
     'Skills-based assessment to qualify for projects',
     'Secure payments and transaction handling',
@@ -79,7 +79,7 @@ const projects: Project[] = [
     image: 'https://media-hosting.imagekit.io//de2afb5587584ae2/tracker.jpg?Expires=1835438911&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=jcPCj-RfeDesm5YBZafsvZQLpWmARFn~j6lOTQ8XFVr5mhZZC2Qj2hd60W0-mD6maVvxjaQw887nyAqozSe-zRwwrMTzBdcgQ4sv5Jr76Oh0vB9t~~QE0-F--RUllFgeoWjZvEmeVhaPWlJFBs-VnJEhafGHRXJFZ7bWBqpy1SO0dO-CWbBpFPYhc2qJrz7cjepDTnnk61QjNef0DXpW56-nQ0WLwm-xaL3E4S7pxHhkjukGQbYrFz9rH~R9UJsigaA327lc1syyLQXRLZTsLyIASgH6znMHr843GO7ynbKEIXRa6W-c9JbPFuSa3o4zv476zdY6xJ9wj5AHMpHxNA__',
     category: 'Mobile App',
     technologies: ['React Native', 'Redux', 'Firebase', 'Health API'],
-    githubUrl: 'https://github.com',
+    githubUrl: 'https://github.com/sahilansari0002',
     features: [
       'Workout tracking and planning',
       'Nutrition logging and analysis',
@@ -128,7 +128,6 @@ const projects: Project[] = [
 }
 
 ];
-
 const categories = ['All', 'Web App', 'Mobile App', 'AI Tool'];
 
 const ProjectsSection: React.FC = () => {
@@ -163,15 +162,19 @@ const ProjectsSection: React.FC = () => {
   };
 
   const modalVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
+    hidden: { opacity: 0, y: -50 },
     visible: { 
       opacity: 1, 
-      scale: 1,
-      transition: { duration: 0.3 }
+      y: 0,
+      transition: { 
+        type: "spring",
+        damping: 25,
+        stiffness: 300
+      }
     },
     exit: { 
-      opacity: 0, 
-      scale: 0.8,
+      opacity: 0,
+      y: -50,
       transition: { duration: 0.3 }
     }
   };
@@ -279,38 +282,49 @@ const ProjectsSection: React.FC = () => {
           ))}
         </motion.div>
         
-
         {/* Project Modal */}
         <AnimatePresence>
           {selectedProject && (
             <>
-<motion.div
-  variants={backdropVariants}
-  initial="hidden"
-  animate="visible"
-  exit="exit"
-  className="fixed inset-0 flex items-center justify-center bg-black/70 backdrop-blur-sm z-50"
-  onClick={() => setSelectedProject(null)}
-/>
-
+              <motion.div
+                variants={backdropVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50"
+                onClick={() => setSelectedProject(null)}
+              />
               
               <motion.div
+                drag
+                dragConstraints={{
+                  top: 0,
+                  left: -500,
+                  right: 500,
+                  bottom: 500
+                }}
+                dragElastic={0.1}
+                dragMomentum={false}
                 variants={modalVariants}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-                w-full max-w-2xl max-h-[80vh] overflow-y-auto bg-white dark:bg-dark-100 
-                rounded-xl shadow-2xl z-50 p-6 border border-gray-200 dark:border-dark-300 flex flex-col">
+                className="fixed top-8 left-1/2 transform -translate-x-1/2 
+                          w-full max-w-2xl max-h-[80vh] overflow-y-auto bg-white dark:bg-dark-100 
+                          rounded-xl shadow-2xl z-50 p-6 border border-gray-200 dark:border-dark-300 
+                          cursor-move"
+              >
+                <div className="absolute top-0 left-0 w-full h-8 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-t-xl"></div>
+                
                 <button
                   onClick={() => setSelectedProject(null)}
-                  className="absolute top-4 right-4 p-2 rounded-full bg-gray-200 dark:bg-dark-300 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-dark-200 transition-colors duration-300 hover:rotate-90 transform"
+                  className="absolute top-4 right-4 p-2 rounded-full bg-gray-200 dark:bg-dark-300 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-dark-200 transition-colors duration-300 hover:rotate-90 transform cursor-pointer z-10"
                   aria-label="Close modal"
                 >
                   <X size={20} />
                 </button>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="overflow-hidden rounded-lg shadow-md">
                     <img
                       src={selectedProject.image}
