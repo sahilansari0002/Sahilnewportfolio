@@ -20,14 +20,35 @@ interface Achievement {
 }
 
 const achievements: Achievement[] = [
+
   {
-    id: 1,
-    title: 'Reliance Foundation Scholar',
-    description: 'Awarded the prestigious Reliance Foundation Scholarship for academic excellence and contributions to technology and innovation.',
-    image: 'https://media-hosting.imagekit.io//eee54aa36d2043cc/1693105788638.jpg?Expires=1835437357&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=mA0miFDqezdKo-Rk4h6-gAWa0zHTdgMzS8K5Rv2LK5C1AA67pV8p89xZrwGhPeyQpWzMWtls7jrP1l4W5MrjTG3dpXm-kfe~JZZYk3ZTH95R87AnFlYwAP9GaSQuFaSuoCmqhFY30EAJl3L4qJjbhfZ8rRSNWO1bi9Y2uG~fHC5CqpE0MpEo0hWKE2c3DXgM-5iGL5E4wNHKG1zBCaPNr3~PrNAla4e3VFVfwyfDp0AWePh-N1bw1CwA~AF0lsonX8mlrboshkpa-9bkl~gP4lfjq7SwcZ0ZCFjL2WDui9VLCcNRnByIFrehPECWT~I2gSsckh-wP8zqiALdWNZYBA__',
-    date: '2022',
-    category: 'Scholarship'
+    id: 13,
+    title: 'Top 1000 - SBI Youth Ideathon 2025',
+    description: 'Selected among the Top 1000 teams out of 44,000+ participants across India for the SBI Youth Ideathon 2025. Represented our team with the slogan "Nayi Soch, Naya Bharat" at the Grand Finale held at the IIT Delhi campus.',
+    image: 'https://media-hosting.imagekit.io/01c524387d6346c5/%F0%9F%94%ADGcamHero_20250405_151552_%E2%8C%9B%20IPHONE%2014%20PRO%20MAX%20BY%20GCAM%20HERO%20(AUTO)%20LMC8.4%20R13.jpg?Expires=1838743904&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=t20OydG7a6E8FIaQQkIueztgI3f11hCl1LobUoTuJ6yBwZWmLHFgqap9dWTTfI1coFi6tLRrM71zFtOmyfxRwaKiXfZtwlg5bkoBvOERw9LG2Req9JaPvvt4o1bdIALAk5VFDIqjVIsGwqnNWvGDcKyCkmB3Zy0zOqw0p3NHkYCFjAGdxaTFkRJygY068aQ4O-d9YGTqL4UWsLlH3YGm0DNKPpeiKgmvoYaTM6YIEJ0iiMr3ANflawjycr1ITMoqlmXGIYoATDPPKe-Q9CWfXG4~kiESKJqyPCuxhUFyc~RMdPEnOxrKVGex89ngXevO-2zSrpID6rN8P~evqhO4dg__',
+    date: '2025',
+    category: 'Innovation & Ideathons'
   },
+
+  {
+    id: 14,
+    title: 'Google Cloud Arcade Champion',
+    description: 'Achieved the Champion Milestone in the Google Cloud Arcade event. Received exclusive gifts and recognition from Google Cloud for outstanding performance and completing all tasks successfully.',
+    image: 'https://media-hosting.imagekit.io/16f0d683df4f4b50/Screenshot_2025_0408_234944.jpg?Expires=1838744424&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Cwo2S-mda8jGXj9-cog6Zgb8F9mK37DPwg2EfCI~ZX1Gyb-crBxwdSGa5vqFzg3rZk3o~t6xC-4cNUcv5Cgy5Adlut84hFFAs0i1BkKr0sDk5JALoJoLZsrLTSEwAdOSEFwJHcGDbjt6fuV3YtbMwDkklsD31E~3vMrhI3JRbZaq9kJLAJQPSzwypM-2S-6lrHnzQ70Crqdnicj65qOS1EcUmxqArAqoWPEgewYlAFyiN~GKMudvdlQNjn~HN-2P0yywRFpN85bL8EZavalxfRP1v5cAxEIw4cXLHxWmWGmzFu6jAs-tLBxoX3GGK0ojaaLM8u4mGoOmKr5I1oD63Q__',
+    date: '2025',
+    category: 'Cloud & Certifications'
+  },
+  
+
+  {
+    id: 12,
+    title: 'Best Achiever Award - AIM Institute',
+    description: 'Honored with the Best Achiever Award at AIM Institute by CEO Bhupendra Jogi Sir, recognizing consistent performance and dedication towards personal and professional growth.',
+    image: 'https://media-hosting.imagekit.io/40bca98703514b73/jogisir.jpg?Expires=1838742665&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=RvuJ~ZwkvB561ex1KnZnAiiKYK2D3NzAh2qhlKm4Jz9ZFKxslgpU-woYyZAKLEZPDFExd6TEsbge1Sfop5eTFz1Yexf4E8t7dI45But~2m7lz13ONMBTKnfoo9o9ztJgrxUuaSdy-BnwcNsIRjPLfx79WS2XZvd9AB271ApXEL4M0uz2GXI~Spza4B4GbUwHoEV3WmRyAMZLnpq9NhyG3Kox52WodoY~htFAFzA28JU11w0MKYHCmgtUrADxPCw5pA~XxMYpxBcVqifqq-8eqnIGpafYtWxK4ckSHQHaeuK~sBwoF~mJGkBSNXC7JdU76lOchF5~5NbJ4nk~EC3DdQ__',
+    date: '2025',
+    category: 'Awards'
+  },
+
   {
     id: 2,
     title: 'Winner - MSINS Startup Innovation Challenge',
@@ -36,6 +57,16 @@ const achievements: Achievement[] = [
     date: '2023',
     category: 'Startup'
   },
+
+  {
+    id: 1,
+    title: 'Reliance Foundation Scholar',
+    description: 'Awarded the prestigious Reliance Foundation Scholarship for academic excellence and contributions to technology and innovation.',
+    image: 'https://media-hosting.imagekit.io//eee54aa36d2043cc/1693105788638.jpg?Expires=1835437357&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=mA0miFDqezdKo-Rk4h6-gAWa0zHTdgMzS8K5Rv2LK5C1AA67pV8p89xZrwGhPeyQpWzMWtls7jrP1l4W5MrjTG3dpXm-kfe~JZZYk3ZTH95R87AnFlYwAP9GaSQuFaSuoCmqhFY30EAJl3L4qJjbhfZ8rRSNWO1bi9Y2uG~fHC5CqpE0MpEo0hWKE2c3DXgM-5iGL5E4wNHKG1zBCaPNr3~PrNAla4e3VFVfwyfDp0AWePh-N1bw1CwA~AF0lsonX8mlrboshkpa-9bkl~gP4lfjq7SwcZ0ZCFjL2WDui9VLCcNRnByIFrehPECWT~I2gSsckh-wP8zqiALdWNZYBA__',
+    date: '2022',
+    category: 'Scholarship'
+  },
+
   {
     id: 3,
     title: 'Top 15 - National Hackathon (Pune)',
@@ -61,6 +92,15 @@ const achievements: Achievement[] = [
     date: '2024',
     category: 'Entrepreneurship'
   },
+
+  {
+    id: 11,
+    title: 'Attended Startup Mahakumbh 2.0 (2025)',
+    description: 'Represented at Startup Mahakumbh 2.0 held at Bharat Mandapam, New Delhi from April 3rd to 5th, 2025. Gained exposure to India’s top entrepreneurial ecosystem and innovations.',
+    image: 'https://media-hosting.imagekit.io/e4137885499e4f50/startupmaha.jpg?Expires=1838742269&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Z9nvz8lsanQZ4xH8y0i6Nx6IzJx41pMtusQ9zrggEcN-szgaD~HYTaL2BSetGOeXRzd5rh9kAbM9DsO4xwnDh7flZ-prFm-sfD~eO92~SQM1LjwLI36pJkXBFX-YTgVCCQpCXJRmugz6VQagNxWvo98xKsl4Is07TO9tNW~~YYC-6CxO3A4Nf6xx9KwZi2j-fIjcgZOwhXsyst8gZQuQzBjYxlLCOg6qxhIStaQS84vaGW3Fny0bOlCoFVBEGLhhwncepg0F7y2j6nCthqVIRhsWhDURmme8QY64FfJQFByAGvJas0qBEqvliFnAHFbK10HM6lAFMSopTDRrRKJh6g__',
+    date: '2025',
+    category: 'Entrepreneurship'
+  },  
 
 
   {
@@ -95,6 +135,9 @@ const achievements: Achievement[] = [
     date: '2024',
     category: 'Community'
   },
+
+  
+
   {
     id: 9,
     title: 'DevFest Pune 2024 Ticket Giveaway Winner',

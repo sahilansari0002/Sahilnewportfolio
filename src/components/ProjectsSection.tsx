@@ -73,21 +73,25 @@ const projects: Project[] = [
 },
 
 {
+  
     id: 4,
-    title: 'Fitness Tracker Mobile App',
-    description: 'A mobile application for tracking workouts, nutrition, and fitness progress.',
-    image: 'https://media-hosting.imagekit.io//de2afb5587584ae2/tracker.jpg?Expires=1835438911&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=jcPCj-RfeDesm5YBZafsvZQLpWmARFn~j6lOTQ8XFVr5mhZZC2Qj2hd60W0-mD6maVvxjaQw887nyAqozSe-zRwwrMTzBdcgQ4sv5Jr76Oh0vB9t~~QE0-F--RUllFgeoWjZvEmeVhaPWlJFBs-VnJEhafGHRXJFZ7bWBqpy1SO0dO-CWbBpFPYhc2qJrz7cjepDTnnk61QjNef0DXpW56-nQ0WLwm-xaL3E4S7pxHhkjukGQbYrFz9rH~R9UJsigaA327lc1syyLQXRLZTsLyIASgH6znMHr843GO7ynbKEIXRa6W-c9JbPFuSa3o4zv476zdY6xJ9wj5AHMpHxNA__',
-    category: 'Mobile App',
-    technologies: ['React Native', 'Redux', 'Firebase', 'Health API'],
-    githubUrl: 'https://github.com/sahilansari0002',
+    title: 'Weather Forecast Website',
+    description: 'A real-time weather forecast website created during a 3-day ReactJS workshop led by Nakul Sir. Implemented API calls using OpenWeather API and learned core concepts of React libraries.',
+    image: 'https://media-hosting.imagekit.io/95de70674d9c4d13/OIP.jpeg?Expires=1838744894&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=vOX1rTEYeSnwX~OYTwBy8pysaHJQIITvPBNER8okziLpb6KMVKjLj5TSa6Ll8ohx~vNOsFhMnhyMOyEqfmZO-FALajGnP2Vt-IOS0p7TkeN5xZgriaVrl-DzYinfFNYRHZ5wFqZQXIO-z6e5UG4HO71bKUUsyu76thw6KNeJjRvFi9ooPqNP4Wn9IDvvZwLfK8vydpMtp-wVQe1brTwF8GqQMXxdoBPgqQlzm3oBcN0s8yPpsI5MDnt9hjjac18N-m-wCuM9ZcAwqc3hJWQxI8ILPfsniH695OQmX5dWTD8QTqKspavW71jq-AkVDZTbvYwqlbwWAADZ-ULxi2aBnw__',
+    category: 'Web Development',
+    technologies: ['ReactJS', 'OpenWeather API', 'Axios', 'CSS'],
+    liveUrl: 'https://weathersforecaster.netlify.app/',
+    githubUrl: 'https://github.com/sahilansari0002/weatherforecast',
     features: [
-      'Workout tracking and planning',
-      'Nutrition logging and analysis',
-      'Progress photos and measurements',
-      'Goal setting and achievement tracking',
-      'Integration with health devices',
-      'Community challenges and sharing'
+      'Real-time weather updates for any city',
+      'Search functionality with dynamic results',
+      'API integration using Axios',
+      'Responsive UI design',
+      'Current temperature, humidity, and wind data',
+      'Clean and intuitive user interface'
     ]
+  
+  
   },
   {
     id: 5,
