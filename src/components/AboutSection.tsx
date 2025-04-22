@@ -118,15 +118,20 @@ const AboutSection: React.FC = () => {
               
               <ul className="space-y-2 list-disc list-inside text-gray-700 dark:text-gray-300">
               <li>💻 Open Source Contributor (React, Node.js)</li>
-  <li>🏆 Top 15 Rank in National Hackathon (Pune)</li>
-  <li>🚀 Winner of MSINS Startup Innovation Challenge (₹1 Lakh Prize)</li>
-  <li>🎤 Selected by Govt. of Maharashtra for Startup Mahakumbh (New Delhi)</li>
-  <li>📜 Reliance Foundation Scholar</li>
-  <li>🔍 Volunteer Selection for ISRO Bharatiya Antariksh Hackathon 2024</li>
-  <li>🏅 Google Cloud Gen AI Quiz Winner (Top 5)</li>
-  <li>📢 Social Media Contest Winner - Google Cloud Community Day Pune 2024</li>
-  <li>🎖️ Awarded for Best Modal Presentation at Smt. Maherbano College (2023)</li>
-  <li>🌟 Selected among the 🔝 300 in the Futurepreneur Course for 🏆 TiE Global Summit 2024 at 📍 BIEC</li>
+<li>🏆 Top 15 Rank in National Hackathon (Pune)</li>
+<li>🚀 Winner of MSINS Startup Innovation Challenge (₹1 Lakh Prize)</li>
+<li>🎤 Selected by Govt. of Maharashtra for Startup Mahakumbh (New Delhi)</li>
+<li>📜 Reliance Foundation Scholar</li>
+<li>🔍 Volunteer Selection for ISRO Bharatiya Antariksh Hackathon 2024</li>
+<li>🏅 Google Cloud Gen AI Quiz Winner (Top 5)</li>
+<li>📢 Social Media Contest Winner - Google Cloud Community Day Pune 2024</li>
+<li>🎖️ Awarded for Best Modal Presentation at Smt. Maherbano College (2023)</li>
+<li>🌟 Selected among the 🔝 300 in the Futurepreneur Course for 🏆 TiE Global Summit 2024 at 📍 BIEC</li>
+<li>🧠 Selected among Top 1000 Teams - SBI Youth Ideathon 2025 (IIT Delhi)</li>
+<li>🏅 Google Cloud Arcade Champion - Completed All Tasks with Recognition</li>
+<li>🏆 Best Performer of the Batch - Aspire Institute</li>
+<li>🎓 Best Achiever Award - AIM Institute by CEO Bhupendra Jogi Sir</li>
+
 
 
               </ul>

@@ -41,6 +41,16 @@ const achievements: Achievement[] = [
   
 
   {
+    id: 15,
+    title: 'Best Performer of the Batch - Aspire Institute',
+    description: 'Honored as the Best Performer of the Batch at Aspire: The Institute of Human Development for outstanding growth, active participation, and leadership throughout the personality development journey. Recognized for excellence in communication, confidence, and contribution to peer learning.',
+    image: 'https://media-hosting.imagekit.io/20e7cd6b9d3e4498/aspire%20medel.jpg?Expires=1839906823&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=GVCp4k0soC0RixLDZy8QGhgJTfszwvU0KFdwgayhOGfxf-uzykSoYC0xeFYbVvcSiM5F2qMAiAX364KuYma-ePVHg5bpl3fqPIyaP2sLY~KL~oxmbKq9ONO38xA3a0AUWYIUMWuC4eegCYD9ltFMndLXnxX32lkMQFnkBvnd1YSYw0dBC8oySQ341y84V5OSe0xX6-mq6l~L8HBGt6XF0z0M5r8FBQhffgvgDiIy48XsdZc8hiD31sb6GNCrRG1CrSyJMYIiro0HBdto8qIxGhhVqZsEPxvbBKpTFMVqIpCmodTcJLydRWmpiIWaU~JjNl-WnESlJFWRBDKPyxq0cw__', // Replace this with actual hosted image URL
+    date: '2024',
+    category: 'Leadership & Personality'
+  },
+
+  
+  {
     id: 12,
     title: 'Best Achiever Award - AIM Institute',
     description: 'Honored with the Best Achiever Award at AIM Institute by CEO Bhupendra Jogi Sir, recognizing consistent performance and dedication towards personal and professional growth.',
