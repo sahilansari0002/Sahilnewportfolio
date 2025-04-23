@@ -300,95 +300,92 @@ const ProjectsSection: React.FC = () => {
               />
               
               <motion.div
-                drag
-                dragConstraints={{
-                  top: 0,
-                  left: -500,
-                  right: 500,
-                  bottom: 500
-                }}
-                dragElastic={0.1}
-                dragMomentum={false}
                 variants={modalVariants}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="fixed top-8 left-1/2 transform -translate-x-1/2 
-                          w-full max-w-2xl max-h-[80vh] overflow-y-auto bg-white dark:bg-dark-100 
-                          rounded-xl shadow-2xl z-50 p-6 border border-gray-200 dark:border-dark-300 
-                          cursor-move"
+                className="fixed inset-0 z-50 flex items-center justify-center px-4 py-6"
               >
-                <div className="absolute top-0 left-0 w-full h-8 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-t-xl"></div>
-                
-                <button
-                  onClick={() => setSelectedProject(null)}
-                  className="absolute top-4 right-4 p-2 rounded-full bg-gray-200 dark:bg-dark-300 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-dark-200 transition-colors duration-300 hover:rotate-90 transform cursor-pointer z-10"
-                  aria-label="Close modal"
+                <motion.div
+                  className="bg-white dark:bg-dark-100 rounded-xl shadow-2xl 
+                            w-full max-w-2xl max-h-[90vh] overflow-y-auto 
+                            border border-gray-200 dark:border-dark-300"
+                  onClick={(e) => e.stopPropagation()}
                 >
-                  <X size={20} />
-                </button>
-                
-                <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="overflow-hidden rounded-lg shadow-md">
-                    <img
-                      src={selectedProject.image}
-                      alt={selectedProject.title}
-                      className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
+                  <div className="sticky top-0 w-full h-8 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-t-xl z-10"></div>
                   
-                  <div>
-                    <h3 className="text-2xl font-bold mb-2 gradient-text">{selectedProject.title}</h3>
-                    <p className="text-gray-600 dark:text-gray-400 mb-4">{selectedProject.description}</p>
-                    
-                    <div className="mb-4">
-                      <h4 className="font-semibold mb-2 text-primary-600 dark:text-primary-400">Technologies</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {selectedProject.technologies.map(tech => (
-                          <span key={tech} className="skill-tag bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200">
-                            {tech}
-                          </span>
-                        ))}
+                  <button
+                    onClick={() => setSelectedProject(null)}
+                    className="absolute top-4 right-4 p-2 rounded-full bg-gray-200 dark:bg-dark-300 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-dark-200 transition-colors duration-300 hover:rotate-90 transform cursor-pointer z-10"
+                    aria-label="Close modal"
+                  >
+                    <X size={20} />
+                  </button>
+                  
+                  <div className="p-6">
+                    <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="overflow-hidden rounded-lg shadow-md">
+                        <img
+                          src={selectedProject.image}
+                          alt={selectedProject.title}
+                          className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                      
+                      <div>
+                        <h3 className="text-2xl font-bold mb-2 gradient-text">{selectedProject.title}</h3>
+                        <p className="text-gray-600 dark:text-gray-400 mb-4">{selectedProject.description}</p>
+                        
+                        <div className="mb-4">
+                          <h4 className="font-semibold mb-2 text-primary-600 dark:text-primary-400">Technologies</h4>
+                          <div className="flex flex-wrap gap-2">
+                            {selectedProject.technologies.map(tech => (
+                              <span key={tech} className="skill-tag bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200">
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        <div className="flex gap-4 mb-4">
+                          {selectedProject.liveUrl && (
+                            <a
+                              href={selectedProject.liveUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="btn-primary flex items-center bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-700 hover:to-secondary-700"
+                            >
+                              <ExternalLink size={18} className="mr-2" /> Live Demo
+                            </a>
+                          )}
+                          
+                          {selectedProject.githubUrl && (
+                            <a
+                              href={selectedProject.githubUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="btn-outline flex items-center"
+                            >
+                              <Github size={18} className="mr-2" /> GitHub
+                            </a>
+                          )}
+                        </div>
                       </div>
                     </div>
                     
-                    <div className="flex gap-4 mb-4">
-                      {selectedProject.liveUrl && (
-                        <a
-                          href={selectedProject.liveUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="btn-primary flex items-center bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-700 hover:to-secondary-700"
-                        >
-                          <ExternalLink size={18} className="mr-2" /> Live Demo
-                        </a>
-                      )}
-                      
-                      {selectedProject.githubUrl && (
-                        <a
-                          href={selectedProject.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="btn-outline flex items-center"
-                        >
-                          <Github size={18} className="mr-2" /> GitHub
-                        </a>
-                      )}
+                    <div className="mt-6 bg-gray-50 dark:bg-dark-200 p-4 rounded-lg">
+                      <h4 className="font-semibold mb-4 text-primary-600 dark:text-primary-400 text-lg">Key Features</h4>
+                      <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        {selectedProject.features.map((feature, index) => (
+                          <li key={index} className="flex items-start">
+                            <span className="inline-block w-2 h-2 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 mt-2 mr-2"></span>
+                            <span className="text-gray-700 dark:text-gray-300">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
-                </div>
-                
-                <div className="mt-6 bg-gray-50 dark:bg-dark-200 p-4 rounded-lg">
-                  <h4 className="font-semibold mb-4 text-primary-600 dark:text-primary-400 text-lg">Key Features</h4>
-                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {selectedProject.features.map((feature, index) => (
-                      <li key={index} className="flex items-start">
-                        <span className="inline-block w-2 h-2 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 mt-2 mr-2"></span>
-                        <span className="text-gray-700 dark:text-gray-300">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                </motion.div>
               </motion.div>
             </>
           )}

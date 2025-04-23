@@ -20,7 +20,7 @@ const skills: Skill[] = [
   // Frontend
   {
     name: 'React.js',
-    level: 95,
+    level: 85,
     icon: <Code size={24} />,
     category: 'Frontend',
     description: 'Building complex, interactive UIs with React hooks, context API, and Redux',
@@ -28,23 +28,23 @@ const skills: Skill[] = [
   },
   {
     name: 'JavaScript',
-    level: 90,
+    level: 80,
     icon: <Code size={24} />,
     category: 'Frontend',
     description: 'ES6+, TypeScript, functional programming, and modern JS patterns',
-    years: 2,
+    years: 1,
   },
   {
-    name: 'CSS/SASS',
+    name: 'CSS',
     level: 85,
     icon: <Layout size={24} />,
     category: 'Frontend',
     description: 'Creating responsive layouts, animations, and custom design systems',
-    years: 3,
+    years: 2,
   },
   {
     name: 'Tailwind CSS',
-    level: 90,
+    level: 80,
     icon: <Layout size={24} />,
     category: 'Frontend',
     description: 'Utility-first CSS framework for rapid UI development',
@@ -56,7 +56,7 @@ const skills: Skill[] = [
     icon: <Code size={24} />,
     category: 'Frontend',
     description: 'Structuring web pages with semantic HTML elements',
-    years: 4,
+    years: 2.5,
   },
   {
     name: 'XML',
@@ -74,7 +74,7 @@ const skills: Skill[] = [
     icon: <Server size={24} />,
     category: 'Backend',
     description: 'Building RESTful APIs, microservices, and server-side applications',
-    years: 1.5,
+    years: 1,
   },
   {
     name: 'PHP',
@@ -82,15 +82,15 @@ const skills: Skill[] = [
     icon: <Server size={24} />,
     category: 'Backend',
     description: 'Developing dynamic web applications with PHP and MySQL',
-    years: 2,
+    years: 1,
   },
   {
     name: 'Python',
-    level: 85,
+    level: 55,
     icon: <Code size={24} />,
     category: 'Backend',
     description: 'Building scripts, automation, and backend applications with Python',
-    years: 3,
+    years: 1,
   },
   {
     name: 'Java',
@@ -98,11 +98,11 @@ const skills: Skill[] = [
     icon: <Code size={24} />,
     category: 'Backend',
     description: 'Developing object-oriented applications and backend systems',
-    years: 3,
+    years: 2,
   },
   {
     name: 'C',
-    level: 75,
+    level: 95,
     icon: <Code size={24} />,
     category: 'Backend',
     description: 'Low-level programming and algorithm implementation',
@@ -111,7 +111,7 @@ const skills: Skill[] = [
 
   // Other
   {
-    name: 'Git/GitHub',
+    name: 'GitHub',
     level: 85,
     icon: <GitBranch size={24} />,
     category: 'Tools',
@@ -119,14 +119,7 @@ const skills: Skill[] = [
     years: 3,
   },
 
-  {
-    name: 'UI/UX Design',
-    level: 75,
-    icon: <Figma size={24} />,
-    category: 'Design',
-    description: 'Creating wireframes, prototypes, and user-centered designs',
-    years: 1,
-  },
+
 ];
 
 const categories = ['All', 'Frontend', 'Backend', 'Tools', 'Design', 'Mobile'];
