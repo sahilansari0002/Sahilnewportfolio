@@ -97,7 +97,7 @@ const HeroSection: React.FC = () => {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-secondary-500/20 rounded-full filter blur-md"></div>
             <img
-              src="https://media-hosting.imagekit.io//361b258c504743a4/sahil google.jpg?Expires=1835432378&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=g272EbZK9wQMbotJUeL-f3kxZdEm4MTyzLZwYr1e4eayFjS6M7EK3cGkrbPtWLKrjpUsEfK5TWirD288U-e4Hu0NKIYageYEQIVYqJz70LDoOGlitP6SNHXIFOmZykXisL4vPLk7JoeesSvzyfWiT-TG0pV87wFdrr4mGpSJUEG0rUA9z~-xJTsU59FnEiRFA8o4eXePc~8XaERW3tpclc2lZxGZbbGs3vKNSkoSe~Wj4b~dxz8~sBU5t80cVI7y5aymhMwwgkwTDxi7Iy1K3puIYR-Gh-~sWM2yqAisxYMYhMX5eOJlFNP3jCfyU8h11R0d2i0RshyY3jPdHh1DOA__"
+              src="/achievement/sahil google.jpg"
               alt="Sahil Ali"
               className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-white dark:border-dark-100 shadow-xl animate-float z-10 relative"
             />
@@ -117,7 +117,7 @@ const HeroSection: React.FC = () => {
         transition={{ delay: 1, duration: 0.5 }}
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300"
       >
-        <span className="text-sm mb-2">Scroll Down</span>
+        <span className="text-sm mb-2"></span>
         <ChevronDown size={24} className="animate-bounce" />
       </motion.a>
     </section>
