@@ -1,122 +1,147 @@
-import React from 'react';
+import { Github, Linkedin, Twitter, Instagram } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { ChevronUp, Github, Instagram, Linkedin, Mail, Twitter } from 'lucide-react';
+import { socialLinks } from '../data/socialLinks';
 
-const Footer: React.FC = () => {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+const Footer = () => {
+  const year = new Date().getFullYear();
+
+  const renderSocialIcon = (icon: string) => {
+    switch (icon) {
+      case 'github':
+        return <Github size={20} />;
+      case 'linkedin':
+        return <Linkedin size={20} />;
+      case 'instagram':
+        return <Instagram size={20} />;
+      default:
+        return null;
+    }
   };
 
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* About */}
-          <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4 gradient-text">Sahil Ali</h3>
-            <p className="text-gray-400 mb-4">
-              Full Stack Developer specializing in creating beautiful, functional, and user-centered digital experiences.
-            </p>
-            <div className="flex space-x-4">
-              <a
-                href="https://github.com/sahilansari0002"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
-                aria-label="GitHub"
-              >
-                <Github size={20} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/sahilansari0002"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={20} />
-              </a>
-              <a
-                href="https://www.instagram.com/sahilansari0002/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
-                aria-label="Instagram"
-              >
-                <Instagram size={20} />
-              </a>
-              <a
-                href="mailto:Sahilali57254@gmail.com"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
-                aria-label="Email"
-              >
-                <Mail size={20} />
-              </a>
-            </div>
-          </div>
-
-          {/* Quick Links */}
+    <footer className="bg-gray-100 dark:bg-gray-900 py-12">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <motion.h3 
+              className="text-xl font-bold mb-4 text-gray-800 dark:text-white"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              Sahil Ali
+            </motion.h3>
+            <motion.p 
+              className="text-gray-600 dark:text-gray-400"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              Full Stack Developer specializing in creating beautiful, functional web applications with modern technologies.
+            </motion.p>
+          </div>
+          
+          <div>
+            <motion.h3 
+              className="text-xl font-bold mb-4 text-gray-800 dark:text-white"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              Quick Links
+            </motion.h3>
+            <motion.ul 
+              className="space-y-2"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
               <li>
-                <a href="#home" className="text-gray-400 hover:text-white transition-colors duration-300">
+                <a 
+                  href="#home" 
+                  className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                >
                   Home
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-gray-400 hover:text-white transition-colors duration-300">
+                <a 
+                  href="#about" 
+                  className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                >
                   About
                 </a>
               </li>
               <li>
-                <a href="#skills" className="text-gray-400 hover:text-white transition-colors duration-300">
-                  Skills
-                </a>
-              </li>
-              <li>
-                <a href="#projects" className="text-gray-400 hover:text-white transition-colors duration-300">
+                <a 
+                  href="#projects" 
+                  className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                >
                   Projects
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-gray-400 hover:text-white transition-colors duration-300">
+                <a 
+                  href="#contact" 
+                  className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                >
                   Contact
                 </a>
               </li>
-            </ul>
+            </motion.ul>
           </div>
-
-          {/* Contact */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li>Akola, Maharastra</li>
-              <li>Sahilali57254@gmail.com</li>
-              <li>+91 8956741978</li>
-            </ul>
-          </div>
-        </div>
-
-        <hr className="border-gray-800 my-8" />
-
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} Sahil Ali. All rights reserved.
-          </p>
           
-          <motion.button
-            onClick={scrollToTop}
-            whileHover={{ y: -5 }}
-            className="p-3 rounded-full bg-gray-800 text-white hover:bg-primary-600 transition-colors duration-300"
-            aria-label="Scroll to top"
-          >
-            <ChevronUp size={20} />
-          </motion.button>
+          <div>
+            <motion.h3 
+              className="text-xl font-bold mb-4 text-gray-800 dark:text-white"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              Connect
+            </motion.h3>
+            <motion.div 
+              className="flex space-x-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              {socialLinks.map((link, index) => (
+                <motion.a
+                  key={link.platform}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 bg-white dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                  aria-label={link.platform}
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  whileTap={{ scale: 0.9 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  {renderSocialIcon(link.icon)}
+                </motion.a>
+              ))}
+            </motion.div>
+          </div>
         </div>
+        
+        <motion.div 
+          className="border-t border-gray-200 dark:border-gray-800 mt-8 pt-8 text-center text-gray-600 dark:text-gray-400"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <p>&copy; {year} Sahil Ali. All rights reserved.</p>
+        </motion.div>
       </div>
     </footer>
   );
